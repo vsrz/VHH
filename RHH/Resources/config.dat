@@ -1,0 +1,17 @@
+-- Window Stuff
+window_width = 640
+window_height = 480
+fullscreen = true
+
+-- Player stuff
+player_speed = 120
+walk_animation_speed = 10
+attack_animation_speed = 10
+stuck_animation_speed = 4
+hit_animation_speed = 2
+
+-- Other stuff
+propell_force = 16
+fighting_time = 45
+drinking_time = 15
+max_rounds = 4

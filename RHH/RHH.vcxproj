@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{82B91AD7-0817-41BF-93E9-9BBB19E2C913}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RHH</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\Dokument\Visual Studio 2010\Projects\rhh\Libs\SFML-2.0j\include;..\..\Libs\SFML-2.0j\include\;..\..\Libs\Lua\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Dokument\Visual Studio 2010\Projects\rhh\Libs\SFML-2.0j\Win_x86\lib;..\..\Libs\SFML-2.0j\Win_x86\lib\;..\..\Libs\Lua\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\vsrz\Desktop\Valhalla Happy Hour Source Code\RHH\RHH\include;C:\Users\vsrz\Desktop\Valhalla Happy Hour Source Code\RHH\RHH\SFML-2.0\include;D:\Dokument\Visual Studio 2010\Projects\rhh\Libs\SFML-2.0j\include;..\..\Libs\SFML-2.0j\include\;..\..\Libs\Lua\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\vsrz\Desktop\Valhalla Happy Hour Source Code\RHH\RHH\include;C:\Users\vsrz\Desktop\Valhalla Happy Hour Source Code\RHH\RHH\SFML-2.0\include;D:\Dokument\Visual Studio 2010\Projects\rhh\Libs\SFML-2.0j\Win_x86\lib;..\..\Libs\SFML-2.0j\Win_x86\lib\;..\..\Libs\Lua\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-audio-d.lib;sfml-network-d.lib;sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vsrz\Desktop\Valhalla Happy Hour Source Code\RHH\RHH\include;C:\Users\vsrz\Desktop\Valhalla Happy Hour Source Code\RHH\RHH\SFML-2.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-audio-s.lib;sfml-network-s.lib;sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\vsrz\Desktop\Valhalla Happy Hour Source Code\RHH\RHH\SFML-2.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="AnimationController.cpp" />
+    <ClCompile Include="ArenaManager.cpp" />
+    <ClCompile Include="Axe.cpp" />
+    <ClCompile Include="axisalignedbox.cpp" />
+    <ClCompile Include="ButtonMasher.cpp" />
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="CooldownTimer.cpp" />
+    <ClCompile Include="gamepad.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="menufx.cpp" />
+    <ClCompile Include="music.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="point.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="ProjectileManager.cpp" />
+    <ClCompile Include="circle.cpp" />
+    <ClCompile Include="RoundCounter.cpp" />
+    <ClCompile Include="scoring.cpp" />
+    <ClCompile Include="SoundFX.cpp" />
+    <ClCompile Include="statecharacterselect.cpp" />
+    <ClCompile Include="StateDrinkingGame.cpp" />
+    <ClCompile Include="StateGame.cpp" />
+    <ClCompile Include="stategamemenu.cpp" />
+    <ClCompile Include="statescore.cpp" />
+    <ClCompile Include="statestartscreen.cpp" />
+    <ClCompile Include="RoundTimer.cpp" />
+    <ClCompile Include="WindowManager.cpp" />
+    <ClCompile Include="statemainmenu.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="AnimationController.h" />
+    <ClInclude Include="ArenaManager.h" />
+    <ClInclude Include="Axe.h" />
+    <ClInclude Include="axisalignedbox.h" />
+    <ClInclude Include="ButtonMasher.h" />
+    <ClInclude Include="collidable.h" />
+    <ClInclude Include="CooldownTimer.h" />
+    <ClInclude Include="gamepad.h" />
+    <ClInclude Include="Gear.h" />
+    <ClInclude Include="menufx.h" />
+    <ClInclude Include="music.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="point.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="ProjectileManager.h" />
+    <ClInclude Include="circle.h" />
+    <ClInclude Include="RoundCounter.h" />
+    <ClInclude Include="scoring.h" />
+    <ClInclude Include="SoundFX.h" />
+    <ClInclude Include="statecharacterselect.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="StateDrinkingGame.h" />
+    <ClInclude Include="StateGame.h" />
+    <ClInclude Include="stategamemenu.h" />
+    <ClInclude Include="stateloadout.h" />
+    <ClInclude Include="statemainmenu.h" />
+    <ClInclude Include="statescore.h" />
+    <ClInclude Include="statestartscreen.h" />
+    <ClInclude Include="RoundTimer.h" />
+    <ClInclude Include="WindowManager.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="StateManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config.dat" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
